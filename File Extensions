@@ -1,0 +1,22 @@
+def main():
+    file = input("Input a file and I will tell you the file type: ")
+    ftype = file.split(".")[1]
+    
+    if ftype == "gif":
+        print("image/gif")
+    elif ftype == "jpg":
+        print("image/jpg")
+    elif ftype == "jpeg":
+        print("image/jpeg")
+    elif ftype == "png":
+        print("image/png")
+    elif ftype == "pdf":
+        print("application/pdf")
+    elif ftype == "txt":
+        print("text/plain")
+    elif ftype == "zip":
+        print("application/zip")
+    else:
+        print("application/octet-stream")
+
+main()
