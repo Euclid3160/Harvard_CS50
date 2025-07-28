@@ -1,0 +1,12 @@
+# Create a program that takes an integer from a user and then displays if the input is even or odd
+def main():
+  x = int(input("Enter a number: "))
+  b = (x%2)
+
+  if b == 0:
+      print(f"{x} is even.")
+  else:
+      print(f"{x} is odd.")
+
+main()
+    
