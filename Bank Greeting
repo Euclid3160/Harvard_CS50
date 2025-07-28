@@ -1,11 +1,18 @@
 def main():
     greeting = input("How would you greet me? ").lower().strip().split()
-
-    if greeting[0] == "hello":
-        print("$0")
-    elif greeting[0][0] == "h":
-        print("$20")
+    first = greeting[0]
+    if len(first) < 5:
+        if first[0] == "h":
+            print("$20")
+        else:
+            print("100")
     else:
-        print("$100")
+        firstfive = first[0]+first[1]+first[2]+first[3]+first[4]
+        if firstfive == "hello":
+            print("$0")
+        elif first[0] == "h":
+            print("$20")
+        else:
+            print("$100")
 
 main()
