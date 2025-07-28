@@ -1,10 +1,11 @@
+# Assignment: implement a program that prompts the user for the answer to the Great Question of Life, the Universe and Everything, 
+# outputting Yes if the user inputs 42 or (case-insensitively) forty-two or forty two. Otherwise output No.
+
+# I took some liberties and changed up the questions and answers a bit, but kept the spirit of the assignment. 
+
 def main():
     answer = input("What is the answer to the universe? ").lower().strip()
-    if answer == "42":
-        correct()
-    elif  answer == "forty two":
-        correct()
-    elif answer == "forty-two":
+    if answer == "42" or answer == "forty two" or answer == "forty-two":
         correct()
     else:
         print("That is incorrect, try again young one.")
