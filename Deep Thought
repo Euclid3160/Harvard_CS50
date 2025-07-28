@@ -1,0 +1,16 @@
+def main():
+    answer = input("What is the answer to the universe? ").lower().strip()
+    if answer == "42":
+        correct()
+    elif  answer == "forty two":
+        correct()
+    elif answer == "forty-two":
+        correct()
+    else:
+        print("That is incorrect, try again young one.")
+        main()
+
+def correct():
+    print("That is correct, carry on wise one.")
+
+main()
