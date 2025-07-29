@@ -1,0 +1,19 @@
+# implement a program that prompts the user for the name of a variable in camel case and outputs the corresponding name in snake case. 
+# Assume that the user’s input will indeed be in camel case.
+
+def main():
+    camel_case = input("camelCase: ")
+    camel_list = []
+    for car in camel_case:
+        camel_list.append(car)
+    snake_case = ""
+    for car in camel_list:
+        if car.isupper():
+            snake_case += "_"
+            car = car.lower()
+            snake_case += f"{car}"
+        else:
+            snake_case += f"{car}"
+    print(snake_case)
+
+main()
