@@ -1,0 +1,26 @@
+# In a file called adieu.py, implement a program that prompts the user for names, one per line, until the user inputs control-d. 
+# Assume that the user will input at least one name. Then bid adieu to those names, separating two names with one and, 
+# three names with two commas and one and, and names with commas and one and,
+
+name_list = []
+try:    
+    while True:
+        name = input("Name: ")
+        name_list.append(name)
+except EOFError:
+    print()
+    l = len(name_list)
+    if l < 2:
+        try:
+            print(f"Adieu, adieu, to {name_list[0]}")
+        except IndexError:
+            print("Adieu")
+    elif l == 2:
+        print(f"Adieu, adieu, to {name_list[0]} and {name_list[1]}")
+    elif l == 3:
+        print(f"Adieu, adieu, to {name_list[0]}, {name_list[1]}, and {name_list[2]}")
+    else:
+        s=""
+        for name in name_list[1:l-2]:
+            s += ", " + name
+        print(f"Adieu, adieu, to {name_list[0]}{s}, and {name_list[l-1]}")
